@@ -23,7 +23,7 @@ body {
 }
 
 /* LAYOUT */
-main {
+.main {
   position: relative;
   width: 100rem;
   height: 60rem;
@@ -34,6 +34,7 @@ main {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
+  /* flex-direction: column; */
 }
 
 .player {
@@ -102,6 +103,7 @@ main {
   font-size: 40px;
   margin-bottom: 20px;
   color: white;
+  text-align: center;
 }
 
 /* ABSOLUTE POSITIONED ELEMENTS */
@@ -160,6 +162,7 @@ main {
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
 }
 
 .player--winner {
@@ -172,4 +175,37 @@ main {
 }
 .hidden {
   display: none;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    position: relative;
+    width: 60rem;
+    height: 110rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(200px);
+    filter: blur();
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  body {
+    height: 110rem;
+  }
+  .btn--roll {
+    top: 53.3rem;
+  }
+  .btn--hold {
+    top: 59.1rem;
+  }
+  .dice {
+    position: absolute;
+    left: 20%;
+    top: 16.5rem;
+    transform: translateX(-50%);
+    height: 10rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+  }
 }
